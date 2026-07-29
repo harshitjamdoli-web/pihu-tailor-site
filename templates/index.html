@@ -4,198 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pihu Boutique | Designer Dress Fashion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #800020;
-            --secondary: #d4af37;
-            --dark: #222;
-            --light: #fdfbf7;
-        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
+            background-color: #fdfbf7;
+            color: #333;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth;
-        }
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--primary), #4a0012);
-            color: white;
-            padding: 50px 20px;
             text-align: center;
-            border-bottom: 4px solid var(--secondary);
+        }
+        header {
+            background: linear-gradient(135deg, #800020, #4a0012);
+            color: white;
+            padding: 40px 20px;
         }
         header h1 {
             margin: 0;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             letter-spacing: 2px;
-            font-family: serif;
         }
         header p {
             font-size: 1.2rem;
             margin-top: 10px;
             color: #f3e5ab;
-            font-weight: 300;
         }
         .container {
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
         }
-        /* Section Titles */
-        .section-title {
-            text-align: center;
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 40px;
-            font-family: serif;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 3px;
-            background: var(--secondary);
-            display: block;
-            margin: 10px auto 0;
-        }
-        /* Gallery Grid */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
         .card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #f0e6d2;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(128,0,32,0.15);
+            transform: translateY(-5px);
         }
         .card img {
             width: 100%;
-            height: 380px;
+            height: 350px;
             object-fit: cover;
         }
         .card-content {
-            padding: 25px;
-            text-align: center;
+            padding: 20px;
         }
         .card-content h3 {
             margin: 0 0 10px;
-            color: var(--primary);
-            font-size: 1.4rem;
+            color: #800020;
+            font-size: 1.3rem;
         }
         .card-content p {
             color: #666;
             font-size: 0.95rem;
-            margin-bottom: 20px;
+            margin: 0;
         }
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.95rem;
-            transition: background 0.3s;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-        }
-        .whatsapp-btn:hover {
-            background-color: #1ebe5d;
-        }
-        .whatsapp-btn i {
-            margin-right: 8px;
-        }
-        /* Info & Booking Section */
-        .info-section {
-            background: white;
-            padding: 50px 20px;
-            margin-top: 60px;
-            border-top: 2px solid #f0e6d2;
-            text-align: center;
-        }
-        .info-box {
-            max-width: 650px;
-            margin: 0 auto;
-            background: #fffdf9;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e6dcc6;
-        }
-        .info-box h3 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.6rem;
-        }
-        .info-box p {
-            color: #555;
-            line-height: 1.6;
-            font-size: 1.05rem;
-            margin: 10px 0;
-        }
-        /* Floating WhatsApp Icon */
-        .floating-wa {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 1000;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        .floating-wa:hover {
-            transform: scale(1.1);
-        }
-        /* Footer */
         footer {
-            background: #1a1a1a;
-            color: #ddd;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 0.95rem;
-            border-top: 4px solid var(--secondary);
-        }
-        footer p {
-            margin: 5px 0;
+            margin-top: 50px;
+            background: #222;
+            color: white;
+            padding: 20px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/910000000000?text=Hello%20Pihu%20Boutique,%20I%20want%20to%20visit%20your%20store%20at%20Jamdoli." class="floating-wa" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <header>
         <h1>Pihu Boutique</h1>
-        <p>Designer Dress Fashion & Exclusive Custom Tailoring</p>
+        <p>Exclusive Designer Dresses & Indian Fashion Couture</p>
     </header>
 
     <div class="container">
-        <h2 class="section-title">Our Exclusive Collection</h2>
+        <h2 style="color: #800020; margin-bottom: 30px;">Our Special Collection</h2>
         
         <div class="gallery">
             <!-- Dress 1 -->
@@ -203,10 +91,7 @@
                 <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Designer Lehenga">
                 <div class="card-content">
                     <h3>Royal Bridal Lehenga</h3>
-                    <p>Heavy traditional embroidery with fine artisan craftsmanship.</p>
-                    <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20Royal%20Bridal%20Lehenga" class="whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Book / Inquire
-                    </a>
+                    <p>Heavy traditional embroidery with fine artisan details.</p>
                 </div>
             </div>
 
@@ -215,10 +100,7 @@
                 <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" alt="Anarkali Suit">
                 <div class="card-content">
                     <h3>Designer Anarkali Suit</h3>
-                    <p>Elegant festive wear crafted with premium breathable fabric.</p>
-                    <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20Designer%20Anarkali%20Suit" class="whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Book / Inquire
-                    </a>
+                    <p>Elegant festive wear crafted with premium fabric.</p>
                 </div>
             </div>
 
@@ -227,28 +109,14 @@
                 <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80" alt="Party Wear Saree">
                 <div class="card-content">
                     <h3>Party Wear Designer Saree</h3>
-                    <p>Graceful drapes tailored meticulously for special occasions.</p>
-                    <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20Party%20Wear%20Designer%20Saree" class="whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Book / Inquire
-                    </a>
+                    <p>Graceful drapes tailored for special occasions.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Info Section -->
-    <div class="info-section">
-        <div class="info-box">
-            <h3>Visit Our Studio</h3>
-            <p><i class="fas fa-map-marker-alt" style="color: #800020;"></i> <strong>Address:</strong> Plot No. 82, Near Charbhuja Nath Ji Temple, Jamdoli, Jaipur</p>
-            <p><i class="fas fa-clock" style="color: #800020;"></i> <strong>Timing:</strong> Monday to Saturday (10:00 AM - 7:00 PM)</p>
-            <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">Custom stitching and bespoke tailoring available on direct store visit.</p>
-        </div>
-    </div>
-
     <footer>
         <p>&copy; 2026 Pihu Boutique, Jamdoli, Jaipur. All Rights Reserved.</p>
-        <p style="font-size: 0.85rem; color: #888;">Crafted with Passion & Code</p>
     </footer>
 
 </body>
